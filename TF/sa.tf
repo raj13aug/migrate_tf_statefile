@@ -6,10 +6,10 @@
 #   }
 # }
 
-module "dev-user-accounts" {
+module "service-accounts" {
   source     = "terraform-google-modules/service-accounts/google"
-  version    = "4.2.0"
-  project_id = "dev-project"
+  version    = "4.2.3"
+  project_id = var.project_id
 
   grant_xpn_roles = false
   names           = ["dev-user"]
