@@ -11,9 +11,8 @@ module "service-accounts" {
   version    = "4.2.3"
   project_id = var.project_id
 
-  grant_xpn_roles = false
-  names           = ["dev-user", "pro-user"]
-  generate_keys   = true
+  names         = ["dev-user", "pro-user"]
+  generate_keys = true
   project_roles = [
     "${var.project_id}=>roles/viewer",
     "${var.project_id}=>roles/storage.objectViewer",
